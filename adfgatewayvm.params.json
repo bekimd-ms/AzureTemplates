@@ -1,0 +1,37 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "existingDataFactoryName": {
+      "value":"onedwtest"
+    },
+    "GatewayName": {
+      "value": "AzSDataGate"
+    },
+    "GatewayKey": {
+      "value": "DMG@7ea7c5ab-4b36-4594-a909-7d66cb136525@c5cb45be-e644-40d5-9618-9a0fb7c7f4b0@eu@Fic820pJ8KL0EuSLYZjiOyQY0gJsMqyOGZAjbsNuYkw="
+    },    
+    "adminUserName": {
+      "value": "superuser"
+    },
+    "adminPassword": {
+      "value": "1Add*Pass"
+    },
+    "existingVirtualNetworkName":{
+      "value": "datagatevnet"
+    },
+    "existingVnetLocation":
+    {
+      "value": "local"
+    },
+    "existingVnetResourceGroupName":{
+      "value": "datagate"
+    },
+    "existingSubnetInYourVnet": {
+      "value": "default"
+    },
+    "enableToSetDataStorePasswordsFromInternet": {
+      "value": "yes"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountName": {
+            "type": "string"
+        }
+    },
+    "variables": {
+    },
+    "resources": [
+    ],
+    "outputs": {
+        "storageUrlOutput": {
+            "value": "[reference(resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName')), '2015-06-15').primaryEndpoints['blob']]",
+            "type": "string"
+        },
+        "listKeysOutput": { 
+            
+            "value": "[listKeys(resourceId('Microsoft.Storage/storageAccounts', parameters('storageAccountName')), '2015-06-15').key1]",
+            "type" : "string" 
+        }      
+    }
+}

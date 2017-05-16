@@ -1,0 +1,108 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "local"
+        },
+        "virtualMachineName": {
+            "value": "jeffsqlent"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_D2_v2"
+        },
+        "adminUsername": {
+            "value": "sqladmin"
+        },
+        "storageAccountName": {
+            "value": "sqlentrg2disks862"
+        },
+        "virtualNetworkName": {
+            "value": "sqlentrg2-vnet"
+        },
+        "networkInterfaceName": {
+            "value": "jeffsqlent877"
+        },
+        "networkSecurityGroupName": {
+            "value": "jeffsqlent-nsg"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "storageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "sqlentrg2diag577"
+        },
+        "diagnosticsStorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "Microsoft.Storage/storageAccounts/sqlentrg2diag577"
+        },
+        "addressPrefix": {
+            "value": "10.1.0.0/24"
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "subnetPrefix": {
+            "value": "10.1.0.0/24"
+        },
+        "publicIpAddressName": {
+            "value": "jeffsqlent-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "sqlConnectivityType": {
+            "value": "Private"
+        },
+        "sqlPortNumber": {
+            "value": 1433
+        },
+        "sqlStorageDisksCount": {
+            "value": 1
+        },
+        "sqlStorageWorkloadType": {
+            "value": "GENERAL"
+        },
+        "sqlStorageDisksConfigurationType": {
+            "value": "NEW"
+        },
+        "sqlStorageStartingDeviceId": {
+            "value": 2
+        },
+        "sqlStorageDeploymentToken": {
+            "value": 65869
+        },
+        "sqlAutopatchingDayOfWeek": {
+            "value": "Sunday"
+        },
+        "sqlAutopatchingStartHour": {
+            "value": "2"
+        },
+        "sqlAutopatchingWindowDuration": {
+            "value": "60"
+        },
+        "sqlAutobackupRetentionPeriod": {
+            "value": "3"
+        },
+        "backupSystemDbs": {
+            "value": "false"
+        },
+        "backupScheduleType": {
+            "value": "Automated"
+        },
+        "sqlAuthenticationLogin": {
+            "value": "sqladmin"
+        },
+        "sqlAuthenticationPassword": {
+            "value": null
+        },
+        "rServicesEnabled": {
+            "value": "false"
+        }
+    }
+}
