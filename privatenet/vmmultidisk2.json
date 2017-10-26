@@ -17,6 +17,10 @@
             "type": "string",
             "defaultValue": "superuser"
         },
+        "storageType": {
+            "type": "string",
+            "defaultValue": "Standard_LRS"
+        },                
         "dataDiskSize": {
             "type": "string",
             "defaultValue": "1023"

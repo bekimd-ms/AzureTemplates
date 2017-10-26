@@ -13,6 +13,10 @@
             "type": "string",
             "defaultValue": "Standard_D4"
         },
+        "storageType": {
+            "type": "string",
+            "defaultValue": "Standard_LRS"
+        },        
         "adminUsername": {
             "type": "string",
             "defaultValue": "superuser"
@@ -98,7 +102,7 @@
             "apiVersion": "2015-06-15",
             "location": "[parameters('location')]",
             "properties": {
-                "accountType": "Standard_LRS"
+                "accountType": "[parameters('storageType')]"
             }
         },
         {

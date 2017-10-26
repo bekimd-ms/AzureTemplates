@@ -13,6 +13,10 @@
             "type": "string",
             "defaultValue": "Standard_D4"
         },
+        "storageType": {
+            "type": "string",
+            "defaultValue": "Standard_LRS"
+        },        
         "adminUsername": {
             "type": "string",
             "defaultValue": "superuser"
@@ -82,7 +86,7 @@
                             "lun": 0, 
                             "createOption": "Empty",
                             "vhd": {
-                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds1/'), parameters('virtualMachineName'), 'disk1.vhd')]"
+                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), 'disk1.vhd')]"
                             }
                         },
                         {
@@ -91,7 +95,7 @@
                             "lun": 1, 
                             "createOption": "Empty",
                             "vhd": {
-                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds2/'), parameters('virtualMachineName'), 'disk2.vhd')]"
+                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), 'disk2.vhd')]"
                             }                            
                         },
                         {
@@ -100,7 +104,7 @@
                             "lun": 2, 
                             "createOption": "Empty",
                             "vhd": {
-                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds3/'), parameters('virtualMachineName'), 'disk3.vhd')]"
+                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), 'disk3.vhd')]"
                             }
                             
                         },
@@ -110,45 +114,45 @@
                             "lun": 3, 
                             "createOption": "Empty",
                             "vhd": {
-                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds4/'), parameters('virtualMachineName'), 'disk4.vhd')]"
+                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), 'disk4.vhd')]"
                             }
                             
                         },
                         {
                             "name": "[concat(parameters('virtualMachineName'),'disk5')]",
                             "diskSizeGB": "[parameters('dataDiskSize')]",
-                            "lun": 0, 
+                            "lun": 4, 
                             "createOption": "Empty",
                             "vhd": {
-                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds1/'), parameters('virtualMachineName'), 'disk5.vhd')]"
+                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), 'disk5.vhd')]"
                             }
                         },
                         {
                             "name": "[concat(parameters('virtualMachineName'),'disk6')]",
                             "diskSizeGB": "[parameters('dataDiskSize')]",
-                            "lun": 1, 
+                            "lun": 5, 
                             "createOption": "Empty",
                             "vhd": {
-                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds2/'), parameters('virtualMachineName'), 'disk6.vhd')]"
+                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), 'disk6.vhd')]"
                             }                            
                         },
                         {
                             "name": "[concat(parameters('virtualMachineName'),'disk7')]",
                             "diskSizeGB": "[parameters('dataDiskSize')]",
-                            "lun": 2, 
+                            "lun": 6, 
                             "createOption": "Empty",
                             "vhd": {
-                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds3/'), parameters('virtualMachineName'), 'disk7.vhd')]"
+                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), 'disk7.vhd')]"
                             }
                             
                         },
                         {
                             "name": "[concat(parameters('virtualMachineName'),'disk8')]",
                             "diskSizeGB": "[parameters('dataDiskSize')]",
-                            "lun": 3, 
+                            "lun": 7, 
                             "createOption": "Empty",
                             "vhd": {
-                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds4/'), parameters('virtualMachineName'), 'disk8.vhd')]"
+                                "uri": "[concat(concat(reference(resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName')), '2015-06-15').primaryEndpoints['blob'], 'vhds/'), parameters('virtualMachineName'), 'disk8.vhd')]"
                             }
                             
                         }                                                
@@ -239,7 +243,7 @@
                     }
                 ]
             }
-        }
+        },
         {
             "apiVersion": "2015-06-15",
             "type": "Microsoft.Compute/virtualMachines/extensions",
